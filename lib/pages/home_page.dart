@@ -23,10 +23,19 @@ class HomeScreen extends StatelessWidget {
           style: GoogleFonts.pacifico(color: Colors.black),
         ),
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.send),
-            color: Colors.black,
+          FlatButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return ProfilePage();
+              }));
+            },
+            child: Image(
+              image: AssetImage(
+                'assets/user.png',
+              ),
+              height: 32.0,
+              width: 32.0,
+            ),
           ),
         ],
       ),
